@@ -1,4 +1,3 @@
-# Pythone-Project
 # Credit Card Fraud Detection
 
 **İsim Soyisim:** ALİ ŞEYHO  
