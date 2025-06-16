@@ -1,108 +1,117 @@
-# Credit Card Fraud Detection
-
-**İsim Soyisim:** ALİ ŞEYHO  
-**Öğrenci Numarası:** 1321330115  
-**Proje Adı:** Credit Card Fraud Detection  
+# ✨💳 Credit Card Fraud Detection 💳✨
 
 ---
 
-## Proje Hakkında
-
-Bu proje, kredi kartı işlemlerindeki dolandırıcılık faaliyetlerinin erken tespiti amacıyla geliştirilmiştir. Veri bilimi ve makine öğrenmesi teknikleri kullanılarak anomali tespiti, sınıflandırma ve dengesiz veri sorunları (imbalanced data) çözülmüştür. Python dili ve çeşitli veri bilimi kütüphaneleri ile kapsamlı veri ön işleme, görselleştirme, dengeleme ve kümeleme analizleri yapılmıştır.
-
----
-
-## İçindekiler
-
-- [Giriş](#giriş)  
-- [Veri Seti](#veri-seti)  
-- [Veri Ön İşleme](#veri-ön-işleme)  
-- [Görsel Analizler ve Temel Bulgular](#görsel-analizler-ve-temel-bulgular)  
-- [Segmentasyon (Kümeleme) Analizi](#segmentasyon-kümeleme-analizi)  
-- [Kullanılan Kütüphaneler ve Araçlar](#kullanılan-kütüphaneler-ve-araçlar)  
-- [Veri Madenciliği Süreci ve Aşamaları](#veri-madenciliği-süreci-ve-aşamaları)  
-- [Yönetim Bilişim Sistemleri (YBS) Alanına Katkısı](#yönetim-bilişim-sistemleri-ybs-alanına-katkısı)  
-- [Sonuç ve Stratejik Değerlendirme](#sonuç-ve-stratejik-değerlendirme)  
-- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)  
-- [İletişim](#iletişim)
+### 👤 İsim Soyisim: **ALİ ŞEYHO**  
+### 🆔 Öğrenci Numarası: **1321330115**  
+### 📁 Proje Adı: **Credit Card Fraud Detection**
 
 ---
 
-## Giriş
+## 🌟 Proje Özeti
 
-Kredi kartı dolandırıcılıkları, finans sektöründe ciddi kayıplara yol açan önemli bir problemdir. Bu proje, gerçek dünya kredi kartı işlem verileri üzerinde makine öğrenmesi teknikleri kullanarak dolandırıcılık işlemlerini tespit etmeyi amaçlamaktadır. Anomali tespiti ve sınıflandırma modelleri geliştirilmiş, ayrıca veri dengesizliği SMOTE yöntemiyle giderilmiştir.
-
----
-
-## Veri Seti
-
-Veri seti, Kaggle platformundan temin edilen “Credit Card Fraud Detection” veri setidir. Veri seti; işlem zamanı, işlem tutarı ve işlem sınıfı (dolandırıcılık ya da normal) gibi bilgileri içermektedir. Sınıf dengesizliği (çok az dolandırıcılık işlemi) önemli bir zorluktur.
+Bu **parlak** ve **gelişmiş** proje, kredi kartı dolandırıcılığı tespiti için tasarlanmıştır. Gerçek dünyadan alınan karmaşık ve **dengesiz** veri seti üzerinde derinlemesine analizler yapılmış, makine öğrenimi teknikleri ile anomali tespiti ve sınıflandırma yöntemleri geliştirilmiştir.  
+Finansal güvenliği artırmaya yönelik bu çalışma, **veri biliminde altın standartları** hedeflemektedir.
 
 ---
 
-## Veri Ön İşleme
+## 📊 İçindekiler
 
-- Veri setinde eksik değer bulunmamaktadır.  
-- İşlem tutarındaki aykırı değerler incelenmiştir.  
-- İşlem tutarı ve diğer sayısal değişkenler StandardScaler ile normalleştirilmiştir.  
-- Sınıf dengesizliği SMOTE yöntemi ile dengelenmiştir.  
-
----
-
-## Görsel Analizler ve Temel Bulgular
-
-- İşlem tutarındaki aykırı değerler grafiklerle analiz edilmiştir.  
-- Sınıf dağılımı görselleştirilerek dengesizliğin boyutu gösterilmiştir.  
-- SMOTE sonrası dengelenmiş sınıf dağılımı sunulmuştur.  
-
----
-
-## Segmentasyon (Kümeleme) Analizi
-
-- K-Means algoritması kullanılarak işlem verileri kümelenmiştir.  
-- Elbow yöntemi ile optimal küme sayısı belirlenmiştir.  
-- Kümeleme sonuçları anomali tespiti açısından yorumlanmıştır.  
+1. [🚀 Giriş](#-giriş)  
+2. [📂 Veri Seti](#-veri-seti)  
+3. [🧹 Veri Ön İşleme](#-veri-ön-işleme)  
+4. [📈 Görsel Analizler ve Temel Bulgular](#-görsel-analizler-ve-temel-bulgular)  
+5. [🔍 Segmentasyon (Kümeleme) Analizi](#-segmentasyon-kümeleme-analizi)  
+6. [🛠 Kullanılan Kütüphaneler ve Araçlar](#-kullanılan-kütüphaneler-ve-araçlar)  
+7. [⚙ Veri Madenciliği Süreci ve Aşamaları](#-veri-madenciliği-süreci-ve-aşamaları)  
+8. [🏢 Yönetim Bilişim Sistemleri (YBS) Alanına Katkısı](#-yönetim-bilişim-sistemleri-ybs-alanına-katkısı)  
+9. [📌 Sonuç ve Stratejik Değerlendirme](#-sonuç-ve-stratejik-değerlendirme)  
+10. [💻 Kurulum ve Çalıştırma](#-kurulum-ve-çalıştırma)  
+11. [✉ İletişim](#-iletişim)
 
 ---
 
-## Kullanılan Kütüphaneler ve Araçlar
+## 🚀 Giriş
 
-- pandas  
-- numpy  
-- matplotlib  
-- seaborn  
-- scikit-learn (StandardScaler, KMeans, PCA, DBSCAN, AgglomerativeClustering, metrics)  
-- imblearn (SMOTE)  
-- scipy (zscore)  
+Kredi kartı dolandırıcılığı, finans dünyasının **en karanlık sorunlarından biridir.** Bu proje, bu karanlıkta bir ışık yakmak için hazırlandı.  
+Anomali tespiti ve sınıflandırma modelleriyle **gerçek zamanlı dolandırıcılık tespiti**, veri biliminde altın değerinde bir başarıdır.  
+**SMOTE ile dengelenmiş veri**, sağlam analizlerin ve model başarısının temelidir.
 
 ---
 
-## Veri Madenciliği Süreci ve Aşamaları
+## 📂 Veri Seti
 
-1. Problem tanımı ve veri setinin analizi  
-2. Veri temizleme ve aykırı değer incelemesi  
-3. Veri normalizasyonu ve dengesizliğin giderilmesi  
-4. Anomali tespiti ve sınıflandırma modellerinin geliştirilmesi  
-5. Kümeleme algoritmaları ile segmentasyon analizi  
-6. Sonuçların yorumlanması ve raporlanması  
+- **Kaggle'dan temin edilen** "Credit Card Fraud Detection" veri seti kullanılmıştır.  
+- İşlem zamanı, tutarı ve dolandırıcılık etiketi (0: Normal, 1: Dolandırıcılık) içermektedir.  
+- Sınıf dengesizliği sebebiyle özel dengeleme teknikleri uygulanmıştır.
 
 ---
 
-## Yönetim Bilişim Sistemleri (YBS) Alanına Katkısı
+## 🧹 Veri Ön İşleme
 
-Proje, finans sektöründe dolandırıcılık risklerinin azaltılması ve yönetilmesi için veriye dayalı karar destek sistemlerine katkı sağlamaktadır. Analizler, finans kurumlarının stratejik risk yönetimi ve operasyonel süreçlerinde kullanılabilir içgörüler sunmaktadır.
-
----
-
-## Sonuç ve Stratejik Değerlendirme
-
-Bu çalışma, dengesiz veri sorununu etkin şekilde yöneterek ve gelişmiş analiz teknikleri uygulayarak kredi kartı dolandırıcılığının erken tespiti konusunda başarılı sonuçlar elde etmiştir. Finansal kayıpların önlenmesi ve müşteri güveninin artırılması için önemli bir veri bilimi uygulamasıdır.
+- Eksik değer **bulunmamaktadır**.  
+- Aykırı değerler detaylıca incelenmiştir.  
+- Sayısal veriler **StandardScaler** ile normalize edilmiştir.  
+- **SMOTE** yöntemiyle sınıf dengesizliği giderilmiştir.  
 
 ---
 
-## Kurulum ve Çalıştırma
+## 📈 Görsel Analizler ve Temel Bulgular
 
-1. Python 3.7 veya üzeri yüklü olmalıdır.  
-2. Gerekli kütüphaneler aşağıdaki komutla kurulabilir:  
+- İşlem tutarındaki aykırı değerlerin detaylı görselleştirilmesi.  
+- Orijinal ve SMOTE sonrası **sınıf dağılımlarının karşılaştırılması.**  
+- Anomali ve normal işlemler arasındaki temel farkların grafiklerle açıklanması.
+
+---
+
+## 🔍 Segmentasyon (Kümeleme) Analizi
+
+- **K-Means kümeleme** algoritması kullanılarak işlem verileri anlamlı gruplara ayrıldı.  
+- **Elbow yöntemi** ile optimal küme sayısı belirlenerek analiz derinleştirildi.  
+- Kümeleme sonuçları dolandırıcılık tespiti açısından yorumlandı ve modelin başarısına katkısı değerlendirildi.
+
+---
+
+## 🛠 Kullanılan Kütüphaneler ve Araçlar
+
+- **pandas**, **numpy**  
+- **matplotlib**, **seaborn**  
+- **scikit-learn** (StandardScaler, KMeans, PCA, DBSCAN, AgglomerativeClustering, silhouette_score)  
+- **imblearn** (SMOTE)  
+- **scipy** (zscore)  
+
+---
+
+## ⚙ Veri Madenciliği Süreci ve Aşamaları
+
+1. Problemin tanımı ve veri keşfi  
+2. Veri temizleme ve ön işleme  
+3. Veri normalizasyonu ve SMOTE ile dengesizliğin giderilmesi  
+4. Anomali tespiti için sınıflandırma modellerinin geliştirilmesi  
+5. Kümeleme yöntemleri ile segmentasyon  
+6. Sonuçların analiz edilmesi ve raporlanması  
+
+---
+
+## 🏢 Yönetim Bilişim Sistemleri (YBS) Alanına Katkısı
+
+Bu proje, **YBS alanında finansal dolandırıcılık risklerini minimize eden karar destek sistemlerine ışık tutar.**  
+Veri odaklı stratejiler geliştirilerek kurumların risk yönetimi ve operasyonel verimliliği artırılabilir.  
+Gerçek zamanlı dolandırıcılık tespiti sayesinde, müşteri güveni ve kurum itibarında **altın değerinde iyileşme** sağlanabilir.
+
+---
+
+## 📌 Sonuç ve Stratejik Değerlendirme
+
+- **Başarılı dolandırıcılık tespiti** için dengesiz verinin dengelenmesi kritik rol oynamaktadır.  
+- Kümeleme ve sınıflandırma teknikleri, kredi kartı işlemlerini etkili şekilde analiz etmiştir.  
+- Proje, finans sektöründe veri bilimi uygulamalarının **stratejik önemini kanıtlamaktadır.**
+
+---
+
+## 💻 Kurulum ve Çalıştırma
+
+1. Python 3.7+ yüklü olmalı.  
+2. Gerekli paketleri yüklemek için:  
    ```bash
    pip install -r requirements.txt
