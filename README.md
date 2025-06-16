@@ -3,7 +3,7 @@
 ---
 
 ### 👤 İsim Soyisim: **ALİ ŞEYHO**  
-### 🆔 Öğrenci Numarası: **1321330115**  
+### 🆔 Öğrenci Numarası: **132130115**  
 ### 📁 Proje Adı: **Credit Card Fraud Detection**
 
 ---
